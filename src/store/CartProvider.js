@@ -6,7 +6,7 @@ const CartProvider = ({ children }) => {
   const removeItem = (id) => {};
   const cartContext = {
     items: [],
-    totoalAmount: 0,
+    totalAmount: 0,
     addItem,
     removeItem,
   };
