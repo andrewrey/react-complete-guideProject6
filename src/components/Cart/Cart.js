@@ -9,7 +9,9 @@ const Cart = ({ onCloseCart }) => {
   const totalAmount = `$${ctx.totalAmount.toFixed(2)}`;
   const hasItems = ctx.items.length > 0;
   const cartItemRemoveHandler = (id) => {};
-  const cartItemAddHandler = (item) => {};
+  const cartItemAddHandler = (item) => {
+    ctx.addItem({ ...item, amount: 1 });
+  };
   const cartItems = (
     <ul className={styles["cart-items"]}>
       {ctx.items.map((item) => (
