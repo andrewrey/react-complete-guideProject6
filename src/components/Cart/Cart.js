@@ -15,6 +15,7 @@ const Cart = ({ onCloseCart }) => {
       {ctx.items.map((item) => (
         <CartItem
           {...item}
+          key={item.id}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
           onAdd={cartItemAddHandler.bind(null, item)}
         />
